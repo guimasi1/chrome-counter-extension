@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const showModeElement = document.getElementById("show-mode");
     const resultElement = document.getElementById("result");
     const calculateButton = document.getElementById("calculate");
-    // Recupera la data target salvata
     chrome.storage.sync.get(["targetDate", "showMode"], (data) => {
         if (data.targetDate) {
             inputElement.value = data.targetDate;
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (data.showMode) {
             showModeElement.value = data.showMode;
         }
-        // Calcola automaticamente se esiste una data salvata
         if (data.targetDate) {
             calculateDays();
         }
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     calculateButton.addEventListener("click", () => {
         const targetDate = inputElement.value;
         const showMode = showModeElement.value;
-        // Salva la data target e la modalità di visualizzazione
         chrome.storage.sync.set({ targetDate, showMode }, () => {
             console.log("Target date and show mode saved");
         });
@@ -29,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function calculateDays() {
         const targetDate = new Date(inputElement.value);
         const showMode = showModeElement.value;
-        // Controlla se la data è valida
         if (isNaN(targetDate.getTime())) {
             resultElement.textContent = "Please select a valid date.";
             return;

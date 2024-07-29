@@ -6,6 +6,6 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
-    "default_icon": "calendar.png"
+    "default_icon": "./assets/calendar.png"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "name": "Days Counter Extension",
+  "description": "Calculates the days remaining to a specified date.",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "calendar.png"
+  }
+}

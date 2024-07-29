@@ -1,6 +1,9 @@
 
 # Days Counter Extension
 
+![extension screenshot](https://github.com/guimasi1/days-counter-chrome-extension/blob/main/assets/screenshot.png)
+
+
 ## Description :scroll:
 
 Days Counter Extension is a simple Chrome extension that allows you to calculate the remaining days until a specified date. Users can choose to display either the remaining days or the remaining months and days. 
